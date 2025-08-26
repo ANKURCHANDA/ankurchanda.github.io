@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankur Chanda - Automotive Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300;
+        }
+        .modal-content {
+            @apply bg-white p-8 rounded-lg shadow-2xl w-11/12 md:max-w-2xl transform transition-transform duration-300 scale-95;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Ankur Chanda</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-100">Skills</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-100">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero/About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-10">
+                <!-- Profile Image -->
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                    <img src="https://i.postimg.cc/h4HjNhTr/fiverr-profile-photo.jpg" alt="Ankur Chanda" class="rounded-full w-full h-full object-cover shadow-lg border-4 border-indigo-100">
+                </div>
+                <!-- About Text -->
+                <div class="text-center md:text-left max-w-3xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Automotive Engineering Specialist</h1>
+                    <p class="text-lg text-gray-600">
+                        Automobile Engineering student with expertise in design, prototyping, data analysis, technical authoring, and research. Skilled in vehicle system testing, NVH analysis, and tyre footprint evaluation. Proficient in Python for data processing and automation. Passionate about automotive performance, aerodynamics, and motorsport technology.
+                    </p>
+                    <a href="#contact" class="mt-8 inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">My Skillset</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Technical Skills -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Technical Skills</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>AutoCAD, SolidWorks, Simulink</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Python & MATLAB</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Technical Authoring</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>NVH Analysis & Dyno Testing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Automotive Diagnostic Tools</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Microsoft Office Suite</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>imc FAMOS</li>
+                        </ul>
+                    </div>
+                    <!-- Soft Skills -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Soft Skills</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Analytical & Critical Thinking</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Problem-Solving</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Team Collaboration</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Technical Communication</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-3"></i>Time Management & Adaptability</li>
+                        </ul>
+                    </div>
+                    <!-- Languages -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Languages</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-globe text-indigo-500 mr-3"></i>English (Fluent)</li>
+                            <li class="flex items-center"><i class="fas fa-globe text-indigo-500 mr-3"></i>Bengali (Native)</li>
+                            <li class="flex items-center"><i class="fas fa-globe text-indigo-500 mr-3"></i>Hindi (Fluent)</li>
+                            <li class="flex items-center"><i class="fas fa-globe text-indigo-500 mr-3"></i>German (Basic)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="relative border-l-2 border-indigo-200">
+                    <!-- Experience items here -->
+                    <div class="mb-8 ml-6">
+                        <div class="absolute -left-3 mt-1.5 h-6 w-6 rounded-full bg-indigo-600"></div>
+                        <p class="text-sm text-gray-500">Jun 2025 - Present</p>
+                        <h3 class="text-xl font-semibold text-gray-800">Trainee - Technical Authoring</h3>
+                        <p class="text-md font-medium text-gray-600">KPIT Technologies LTD</p>
+                        <p class="mt-2 text-gray-600">Creating and maintaining technical documentation for automotive software. Collaborating with engineers to ensure accuracy and clarity.</p>
+                    </div>
+                    <div class="mb-8 ml-6">
+                        <div class="absolute -left-3 mt-1.5 h-6 w-6 rounded-full bg-indigo-600"></div>
+                        <p class="text-sm text-gray-500">Sep 2024 - Mar 2025</p>
+                        <h3 class="text-xl font-semibold text-gray-800">Intern</h3>
+                        <p class="text-md font-medium text-gray-600">Apollo Tyres Global R&D</p>
+                        <p class="mt-2 text-gray-600">Analyzed tyre performance data using Python, focusing on NVH and footprint analysis. Developed automated scripts for report generation, significantly reducing turnaround time.</p>
+                    </div>
+                    <div class="mb-8 ml-6">
+                        <div class="absolute -left-3 mt-1.5 h-6 w-6 rounded-full bg-indigo-600"></div>
+                        <p class="text-sm text-gray-500">Jun 2023 - Jul 2023</p>
+                        <h3 class="text-xl font-semibold text-gray-800">Technical Team Member</h3>
+                        <p class="text-md font-medium text-gray-600">Hyundai Motor India Ltd</p>
+                        <p class="mt-2 text-gray-600">Gained hands-on experience in automotive servicing, diagnostics, and customer relations. Performed routine maintenance and assisted in troubleshooting.</p>
+                    </div>
+                    <div class="ml-6">
+                        <div class="absolute -left-3 mt-1.5 h-6 w-6 rounded-full bg-indigo-600"></div>
+                        <p class="text-sm text-gray-500">Apr 2023 - Present</p>
+                        <h3 class="text-xl font-semibold text-gray-800">Subject Matter Expert</h3>
+                        <p class="text-md font-medium text-gray-600">Chegg India</p>
+                        <p class="mt-2 text-gray-600">Provide accurate and comprehensive solutions to academic questions in automotive engineering, helping students understand complex concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Automotive NVH Analysis GUI</h3>
+                            <p class="text-gray-600">Developed a Python & MATLAB-based GUI for FFT and Octave analysis, automating channel identification for noise and vibration separation to improve testing efficiency.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50">
+                            <button class="elaborate-btn w-full text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300" data-title="Automotive NVH Analysis GUI" data-description="Developed a Python & MATLAB-based GUI for FFT and Octave analysis, automating channel identification for noise and vibration separation to improve testing efficiency.">Elaborate on this Project ✨</button>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Kinetic Energy Recovery System (KERS)</h3>
+                            <p class="text-gray-600">Used MATLAB and Simulink to model and enhance KERS efficiency for hybrid vehicles, focusing on optimizing energy recovery and overall vehicle performance.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50">
+                           <button class="elaborate-btn w-full text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300" data-title="Kinetic Energy Recovery System (KERS)" data-description="Used MATLAB and Simulink to model and enhance KERS efficiency for hybrid vehicles, focusing on optimizing energy recovery and overall vehicle performance.">Elaborate on this Project ✨</button>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Rain Detection System</h3>
+                            <p class="text-gray-600">Designed and prototyped a cost-effective rain detection system using water sensors and microcontrollers to trigger an alarm, suitable for vehicle applications.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50">
+                            <button class="elaborate-btn w-full text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300" data-title="Rain Detection System" data-description="Designed and prototyped a cost-effective rain detection system using water sensors and microcontrollers to trigger an alarm, suitable for vehicle applications.">Elaborate on this Project ✨</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Gig Generator Section -->
+        <section id="gig-generator" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">✨ AI-Powered Fiverr Gig Ideas</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Stuck on what services to offer? Let AI brainstorm some ideas based on my skills.
+                </p>
+                <button id="generate-gigs-btn" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
+                    Generate Gig Ideas
+                </button>
+                <div id="gigs-container" class="mt-12 text-left grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- AI generated content will appear here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Workshops & Certifications</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>BMW Workshop (BMW Group)</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>MATLAB Training (Internshala)</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>IC Engines Workshop (IIT Madras)</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>Car Designing (Teachnook IIT Roorkee)</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">I'm currently available for freelance opportunities. If you have a project in mind or just want to connect, feel free to reach out!</p>
+                <div class="flex justify-center items-center space-x-6">
+                    <a href="mailto:ankurchanda22@gmail.com" class="text-indigo-300 hover:text-white transition duration-300 text-lg">
+                        <i class="fas fa-envelope mr-2"></i> ankurchanda22@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="text-indigo-300 hover:text-white transition duration-300 text-lg">
+                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Ankur Chanda. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Elaboration -->
+    <div id="project-modal" class="modal-overlay hidden opacity-0">
+        <div class="modal-content scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <div id="modal-body" class="text-gray-600">
+                <!-- AI generated content will appear here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // --- Mobile menu toggle ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Gemini API Integration ---
+        const apiKey = ""; // This will be handled by the environment.
+
+        // Function to call Gemini API
+        async function callGemini(prompt) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{
+                    role: "user",
+                    parts: [{ text: prompt }]
+                }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    return "Sorry, I couldn't generate a response. The model's response was empty.";
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                return "An error occurred while contacting the AI model. Please check the console for details.";
+            }
+        }
+
+        // --- Feature 1: Fiverr Gig Idea Generator ---
+        const generateGigsBtn = document.getElementById('generate-gigs-btn');
+        const gigsContainer = document.getElementById('gigs-container');
+
+        generateGigsBtn.addEventListener('click', async () => {
+            gigsContainer.innerHTML = `<div class="col-span-1 md:col-span-2 text-center">
+                <p class="text-lg animate-pulse">✨ Generating creative ideas...</p>
+            </div>`;
+            generateGigsBtn.disabled = true;
+            generateGigsBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const skills = "AutoCAD, SolidWorks, Simulink, Python, MATLAB, Technical Authoring, NVH Analysis, Dyno Testing, Automotive Diagnostics";
+            const prompt = `You are a career coach for freelance engineers. Based on the following skills of an automotive engineer, generate 5 creative and specific 'gig' ideas suitable for a platform like Fiverr. For each idea, provide a catchy title and a brief, compelling 1-2 sentence description. Format each gig with a title in bold. Skills: ${skills}`;
+            
+            const response = await callGemini(prompt);
+            
+            // Simple markdown parsing
+            const ideas = response.split('**').filter(s => s.trim() !== '').map((s, i) => i % 2 === 0 ? `<strong>${s.trim()}</strong>` : s.trim());
+            let html = '';
+            for(let i = 0; i < ideas.length; i+=2) {
+                html += `<div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h4 class="text-lg font-semibold text-indigo-700 mb-2">${ideas[i]}</h4>
+                    <p>${ideas[i+1] || ''}</p>
+                </div>`;
+            }
+            gigsContainer.innerHTML = html;
+
+            generateGigsBtn.disabled = false;
+            generateGigsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        });
+
+        // --- Feature 2: Project Elaboration Modal ---
+        const projectModal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const elaborateBtns = document.querySelectorAll('.elaborate-btn');
+
+        function showModal() {
+            projectModal.classList.remove('hidden');
+            setTimeout(() => {
+                projectModal.classList.remove('opacity-0');
+                projectModal.querySelector('.modal-content').classList.remove('scale-95');
+            }, 10);
+        }
+
+        function hideModal() {
+            projectModal.classList.add('opacity-0');
+            projectModal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                projectModal.classList.add('hidden');
+            }, 300);
+        }
+
+        elaborateBtns.forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const title = btn.dataset.title;
+                const description = btn.dataset.description;
+
+                modalTitle.innerText = title;
+                modalBody.innerHTML = '<p class="animate-pulse">✨ Thinking about the details...</p>';
+                showModal();
+
+                const prompt = `You are an expert automotive engineer. Based on the following project title and summary, write a more detailed, professional paragraph (around 100-150 words) that elaborates on the technical challenges, methodologies used, and the project's outcomes. Format the response as a single paragraph. Project Title: "${title}". Summary: "${description}".`;
+                
+                const response = await callGemini(prompt);
+                modalBody.innerHTML = `<p>${response.replace(/\n/g, '<br>')}</p>`;
+            });
+        });
+
+        closeModalBtn.addEventListener('click', hideModal);
+        projectModal.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                hideModal();
+            }
+        });
+
+    </script>
+</body>
+</html>
