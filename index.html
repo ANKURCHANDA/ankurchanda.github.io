@@ -192,32 +192,16 @@
                 </div>
             </div>
         </section>
-
-        <!-- AI Gig Generator Section -->
-        <section id="gig-generator" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="section-title">✨ AI-Powered Fiverr Gig Ideas</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                    Stuck on what services to offer? Let AI brainstorm some ideas based on my skills.
-                </p>
-                <button id="generate-gigs-btn" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
-                    Generate Gig Ideas
-                </button>
-                <div id="gigs-container" class="mt-12 text-left grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- AI generated content will appear here -->
-                </div>
-            </div>
-        </section>
         
         <!-- Certifications Section -->
-        <section id="certifications" class="py-20">
+        <section id="certifications" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Workshops & Certifications</h2>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
-                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>BMW Workshop (BMW Group)</p></div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>MATLAB Training (Internshala)</p></div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>IC Engines Workshop (IIT Madras)</p></div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm"><p>Car Designing (Teachnook IIT Roorkee)</p></div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-sm"><p>BMW Workshop (BMW Group)</p></div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-sm"><p>MATLAB Training (Internshala)</p></div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-sm"><p>IC Engines Workshop (IIT Madras)</p></div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-sm"><p>Car Designing (Teachnook IIT Roorkee)</p></div>
                 </div>
             </div>
         </section>
@@ -268,7 +252,7 @@
         });
 
         // --- Gemini API Integration ---
-        const apiKey = ""; // This will be handled by the environment.
+        const apiKey = "AIzaSyBipSPxDo-hHiEDc5hAQWI_Z8jz3FZqHEI";
 
         // Function to call Gemini API
         async function callGemini(prompt) {
@@ -307,38 +291,7 @@
             }
         }
 
-        // --- Feature 1: Fiverr Gig Idea Generator ---
-        const generateGigsBtn = document.getElementById('generate-gigs-btn');
-        const gigsContainer = document.getElementById('gigs-container');
-
-        generateGigsBtn.addEventListener('click', async () => {
-            gigsContainer.innerHTML = `<div class="col-span-1 md:col-span-2 text-center">
-                <p class="text-lg animate-pulse">✨ Generating creative ideas...</p>
-            </div>`;
-            generateGigsBtn.disabled = true;
-            generateGigsBtn.classList.add('opacity-50', 'cursor-not-allowed');
-
-            const skills = "AutoCAD, SolidWorks, Simulink, Python, MATLAB, Technical Authoring, NVH Analysis, Dyno Testing, Automotive Diagnostics";
-            const prompt = `You are a career coach for freelance engineers. Based on the following skills of an automotive engineer, generate 5 creative and specific 'gig' ideas suitable for a platform like Fiverr. For each idea, provide a catchy title and a brief, compelling 1-2 sentence description. Format each gig with a title in bold. Skills: ${skills}`;
-            
-            const response = await callGemini(prompt);
-            
-            // Simple markdown parsing
-            const ideas = response.split('**').filter(s => s.trim() !== '').map((s, i) => i % 2 === 0 ? `<strong>${s.trim()}</strong>` : s.trim());
-            let html = '';
-            for(let i = 0; i < ideas.length; i+=2) {
-                html += `<div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="text-lg font-semibold text-indigo-700 mb-2">${ideas[i]}</h4>
-                    <p>${ideas[i+1] || ''}</p>
-                </div>`;
-            }
-            gigsContainer.innerHTML = html;
-
-            generateGigsBtn.disabled = false;
-            generateGigsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-        });
-
-        // --- Feature 2: Project Elaboration Modal ---
+        // --- Project Elaboration Modal ---
         const projectModal = document.getElementById('project-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalBody = document.getElementById('modal-body');
